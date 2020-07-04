@@ -1,1 +1,48 @@
-@use "node_modules/bootstrap/scss/bootstrap";
+$body-bg: #EDF2F4;
+
+
+$theme-colors: (
+  "primary": #5051B1,
+  "secondary": #AA9AB0,
+  "dark": #2B2D42,
+  "light": #8D99AE,
+  "danger": #D90429
+);
+
+.title-image {
+  border-radius: 50%;
+}
+
+.thanks {
+  visibility: hidden;
+}
+
+.box-container {
+  display: flex;
+  text-align: center;
+}
+
+.box-container > .link-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+}
+
+.link-box-image {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+.link-text {
+  position: absolute;
+  font-weight: bold;
+  size: 3em;
+}
+
+@import "node_modules/bootstrap/scss/bootstrap";
