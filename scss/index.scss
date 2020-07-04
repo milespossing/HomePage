@@ -1,13 +1,14 @@
-$body-bg: #EDF2F4;
+$body-bg: #f1faee;
 
 
 $theme-colors: (
-  "primary": #5051B1,
-  "secondary": #AA9AB0,
-  "dark": #2B2D42,
+  "primary": #457b9d,
+  "secondary": #a8dadc,
+  "dark": #1d3557,
   "light": #8D99AE,
-  "danger": #D90429
 );
+
+$font-family-base: "roboto", sans-serif;
 
 .title-image {
   border-radius: 50%;
@@ -22,10 +23,10 @@ $theme-colors: (
   text-align: center;
 }
 
-.box-container > .link-box {
+.link-box {
+  position: relative;
+  margin: 2px 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 200px;
   height: 200px;
 }
@@ -41,8 +42,10 @@ $theme-colors: (
 
 .link-text {
   position: absolute;
+  bottom: 0;
+  left: 2px;
   font-weight: bold;
-  size: 3em;
+  font-size: 2em;
 }
 
 @import "node_modules/bootstrap/scss/bootstrap";
