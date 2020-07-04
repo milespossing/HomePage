@@ -1,13 +1,25 @@
-const express = require('express')
+const express = require('express');
 const servers = require('./servers');
 const app = express()
+
+app.use(function (req,res,next) {
+    console.log('Time:',Date.now());
+    next();
+});
+app.use(function (req,res,next) {
+    console.log('Url:', req.url);
+    next();
+})
 
 app.get('/', (req,res) => res.redirect('/index.html'))
 app.use(express.static('public'))
 
-let http = servers.getHttp(app);
-let https = servers.getHttps(app);
+exports.setupHttp = function(port){
+    let http = servers.getHttp(app);
+    http.listen(port,() => console.log(`Http server running on port ${port}`))
+}
 
-
-http.listen(80,() => console.log('Http server running on port 80'))
-https.listen(443,() => console.log('Https server running on port 443'))
+exports.setupHttps = function (port) {
+    let https = servers.getHttps(app);
+    https.listen(port,() => console.log(`Https server running on port ${port}`))
+}
