@@ -7,5 +7,6 @@ var result = sass.renderSync({
 });
 
 fs.writeFile('./public/index.css', result.css, err => {
-    console.log(err);
+    if (err) console.log(err);
+    else console.log("Success")
 });
