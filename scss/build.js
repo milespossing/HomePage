@@ -1,5 +1,4 @@
 var sass = require('sass');
-var fs = require('fs');
 
 var result = sass.renderSync({
     file: './scss/index.scss',
@@ -8,6 +7,4 @@ var result = sass.renderSync({
 
 fs.writeFile('./public/index.css', result.css, err => {
     console.log(err);
-})
-
-console.log(result);
+});
