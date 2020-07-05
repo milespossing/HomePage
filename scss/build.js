@@ -1,5 +1,5 @@
-require('fs');
-var sass = require('sass');
+const fs = require('fs');
+const sass = require('sass');
 
 var result = sass.renderSync({
     file: './scss/index.scss',
