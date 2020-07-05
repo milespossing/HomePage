@@ -1,3 +1,4 @@
+require('fs');
 var sass = require('sass');
 
 var result = sass.renderSync({
