@@ -20,8 +20,3 @@ exports.setupHttp = function(port){
     let http = servers.getHttp(app);
     http.listen(port,() => console.log(`Http server running on port ${port}`))
 }
-
-exports.setupHttps = function (port) {
-    let https = servers.getHttps(app);
-    https.listen(port,() => console.log(`Https server running on port ${port}`))
-}
