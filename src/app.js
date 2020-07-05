@@ -1,18 +1,20 @@
 const express = require('express');
 const servers = require('./servers');
-const app = express()
+const app = express();
+const logger = require('morgan');
 
-app.use(function (req,res,next) {
-    console.log('Time:',Date.now());
-    next();
-});
-app.use(function (req,res,next) {
-    console.log('Url:', req.url);
-    next();
-})
+exports.build = function(argv)
+{
+    argv.silent || app.use(logger('dev'))
 
-app.get('/', (req,res) => res.redirect('/index.html'))
-app.use(express.static('public'))
+    app.use(express.static('public'));
+    app.get('/', (req,res) => res.redirect('/index.html'))
+
+    app.use(function(req,res,next){
+        res.redirect('/error.html');
+    });
+    return exports;
+}
 
 exports.setupHttp = function(port){
     let http = servers.getHttp(app);

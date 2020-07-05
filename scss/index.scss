@@ -1,8 +1,9 @@
 $body-bg: #f1faee;
+$primary: #457b9d;
 
 
 $theme-colors: (
-  "primary": #457b9d,
+  "primary": $primary,
   "secondary": #a8dadc,
   "dark": #1d3557,
   "light": #8D99AE,
@@ -27,8 +28,9 @@ $font-family-base: "roboto", sans-serif;
   position: relative;
   margin: 2px 5px;
   display: flex;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
+  color: $primary;
 }
 
 .link-box-image {
@@ -38,6 +40,11 @@ $font-family-base: "roboto", sans-serif;
   object-fit: cover;
   filter: blur(2px);
   -webkit-filter: blur(2px);
+}
+
+.inactive{
+  filter: blur(2px) grayscale(100%);
+  -webkit-filter: blur(2px) grayscale(100%);
 }
 
 .link-text {
