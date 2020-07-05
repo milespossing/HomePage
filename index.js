@@ -1,8 +1,10 @@
-const argv = require('yargs').default('p',80).argv;
+const argv = require('yargs').default('ports',[5000,5001]).argv;
 const app = require('./src/app.js').build(argv);
 
+let [http,https] = argv.ports;
+
 if (!argv.http){
-    app.setupHttps(443);
+    app.setupHttps(https);
 }
 
-app.setupHttp(argv.p);
+app.setupHttp(argv.p || http);

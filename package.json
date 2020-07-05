@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "http": "node index.js --http -p 8000",
+    "start": "node index.js --ports [5000,5001]",
+    "http": "node index.js --http -p 80",
     "scss": "node scss/build.js"
   },
   "author": "Miles Possing",
