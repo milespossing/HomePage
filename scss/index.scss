@@ -43,8 +43,8 @@ $font-family-base: "roboto", sans-serif;
 }
 
 .inactive{
-  filter: blur(2px) grayscale(100%);
-  -webkit-filter: blur(2px) grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }
 
 .link-text {
