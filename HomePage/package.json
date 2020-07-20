@@ -4,9 +4,7 @@
   "description": "possing.tech home page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "http": "node index.js --http-only -p 80",
     "scss": "node scss/build.js"
   },
   "author": "Miles Possing",
