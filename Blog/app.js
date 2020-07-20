@@ -14,7 +14,10 @@ const app = express();
 
 const {Initialize} = require('./modules/MongoConnection');
 
-Initialize('localhost',27017);
+let mongoHost = process.env.MONGO_HOST || 'localhost';
+let mongoPort = process.env.MONGO_PORT || 27017;
+
+Initialize(mongoHost,mongoPort);
 
 
 // view engine setup

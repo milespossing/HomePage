@@ -3,9 +3,9 @@ const servers = require('./servers');
 const app = express();
 const logger = require('morgan');
 
-exports.build = function(argv)
+exports.build = function()
 {
-    argv.silent || app.use(logger('dev'))
+    process.env.SILENT || app.use(logger('dev'))
 
     app.use(express.static('public'));
     app.get('/', (req,res) => res.redirect('/index.html'))

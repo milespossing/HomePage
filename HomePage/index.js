@@ -1,6 +1,5 @@
-const argv = require('yargs')
-  .default('p',5000)
-  .argv;
-const app = require('./src/app.js').build(argv);
+const app = require('./src/app.js').build();
 
-app.setupHttp(argv.p);
+let port = process.env.PORT || 5000
+
+app.setupHttp(port);
