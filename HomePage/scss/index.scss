@@ -55,4 +55,8 @@ $font-family-base: "roboto", sans-serif;
   font-size: 2em;
 }
 
+.tiny {
+  font-size: .5em;
+}
+
 @import "node_modules/bootstrap/scss/bootstrap";
