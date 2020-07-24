@@ -4,42 +4,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="d-flex flex-column align-items-center">
-        <div class="d-flex flex-column align-items-center">
-            <h1 class="text-primary">Hello, potential hiring manager from Echo!</h1>
-            <img class="title-image" src="media/profile.jpg"/>
-            <p>Welcome to Possing Technology, I'm Miles and this is the <em>real deal</em>. Please hire me.</p>
+    <div class="hero">
+        <div class="blurred-image-container">
+            <div class="parallax" style="background-image: url('media/arch.jpeg')"></div>
+            <div class="parallax scroll-opacity" style="background-image: url('media/arch-blur.jpeg')"></div>
         </div>
-        <div class="container">
-            <h2>Why would you want to hire me?</h2>
-            <p>Empirical* data** shows that companies who hire Miles are more profitable. See below.</p>
-            <img src="media/EmpiricalData.png"/>
-            <p class="tiny">* data is in no way empirical</p>
-            <p class="tiny">** data is in no way based on data; but generally speaking companies I work for do well.</p>
-        </div>
-
-        <div class="box-container align-content-center flex-wrap">
-            <div class="link-box" href="/projects">
-                <img class="link-box-image inactive" src="media/projects_slim.jpg"/>
-                <div class="link-text">Projects</div>
-            </div>
-            <div class="link-box" href="/about">
-                <img class="link-box-image inactive" src="media/about_slim.jpg"/>
-                <div class="link-text">About Me</div>
-            </div>
-            <a class="link-box" href="https://blog.possing.tech">
-                <img class="link-box-image" src="media/blog_slim.jpg"/>
-                <div class="link-text">Blog</div>
-            </a>
-            <div class="link-box" href="/contact">
-                <img class="link-box-image inactive" src="media/telegram_slim.jpg"/>
-                <div class="link-text">Contact</div>
+        <div class="container hero-content h-100">
+            <div class="row justify-content-center align-items-end bottom mb-5">
+                <img class="title-image col-md-3" src="media/profile.jpg"/>
+                <h1 class="text-primary hero-text col-md-6">Hello, potential hiring manager from Echo!</h1>
             </div>
         </div>
     </div>
+    <div class="d-flex flex-column align-items-center mt-5 mb-5">
+        <p class="hero-text dark">Welcome to Possing Technology, I'm Miles and this is the <em>real deal</em>. Please hire me.</p>
+        <div class="container">
+            <h2>Why would you want to hire me?</h2>
+            <p>Empirical* data** shows that companies who hire Miles are more profitable. See below.</p>
+            <img class="w-100" src="media/EmpiricalData.png"/>
+            <p class="tiny">* data is in no way empirical</p>
+            <p class="tiny">** data is in no way based on data; but generally speaking companies I work for do well.</p>
+        </div>
+    </div>
+
+
+    <footer class="modal-footer fixed-bottom bg-dark scroll-translate">
+        <div class="container">
+            <a class="font-weight-bolder " href="https://blog.possing.tech">Blog</a>
+        </div>
+    </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
 </body>
