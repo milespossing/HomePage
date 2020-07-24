@@ -103,8 +103,8 @@ body {
   height: 60px;
 }
 
-.footer > a {
-  color: theme-color('light');
+.modal-footer > * {
+  margin: .1em;
 }
 
 .scroll-opacity {
