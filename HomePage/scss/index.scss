@@ -1,5 +1,5 @@
 $body-bg: #FFFFFF;
-$primary: #4D72BE;
+$primary: #0133B8;
 
 
 $theme-colors: (
@@ -97,9 +97,14 @@ body {
 }
 
 .footer {
+  background-color: $primary;
   position: fixed;
   bottom: 0;
   height: 60px;
+}
+
+.footer > a {
+  color: theme-color('light');
 }
 
 .scroll-opacity {
