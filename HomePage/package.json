@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "scss": "node scss/build.js"
+    "scss": "node scss/run-build.js"
   },
   "author": "Miles Possing",
   "license": "ISC",
