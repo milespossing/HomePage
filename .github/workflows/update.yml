@@ -23,12 +23,11 @@ jobs:
     - uses: actions/checkout@v2
     
     - name: Run SSH Command
-      uses: garygrossgarten/github-action-ssh@release
+      uses: milespossing/github-action-ssh@release
       env:
         repo: Web/HomePage
-        script: ${{ env.repo }}/Update.sh
       with:
-        command: "chmod +x ${{ env.script }} && ${{ env.script }}"
+        command: "chmod +x ${{ env.repo }}/Update.sh && ${{ env.repo }}/Update.sh"
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}
         privateKey: ${{ secrets.SSH_KEY }}
