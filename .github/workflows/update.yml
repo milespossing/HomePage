@@ -27,4 +27,5 @@ jobs:
       with:
         command: "'bash -s' < Update.sh"
         host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER_NAME }}
         privateKey: ${{ secrets.SSH_KEY }}
