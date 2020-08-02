@@ -26,8 +26,9 @@ jobs:
       uses: garygrossgarten/github-action-ssh@release
       env:
         repo: Web/HomePage
+        script: ${{ env.repo }}/Update.sh
       with:
-        command: "${{ env.repo }}/Update.sh"
+        command: "chmod +x ${{ env.script }} && ${{ env.script }}"
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}
         privateKey: ${{ secrets.SSH_KEY }}
