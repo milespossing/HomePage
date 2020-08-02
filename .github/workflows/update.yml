@@ -26,8 +26,9 @@ jobs:
       uses: milespossing/github-action-ssh@release
       env:
         repo: Web/HomePage
+        script: Update.sh
       with:
-        command: "chmod +x ${{ env.repo }}/Update.sh && ${{ env.repo }}/Update.sh"
+        command: "cd ${{ env.repo }} && chmod +x Update.sh && ./Update.sh"
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}
         privateKey: ${{ secrets.SSH_KEY }}
