@@ -27,7 +27,7 @@ jobs:
       env:
         repo: Web/HomePage
       with:
-        command: "cd ${{ env.repo }} && 'bash -s' < Update.sh"
+        command: "${{ env.repo }}/Update.sh"
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER_NAME }}
         privateKey: ${{ secrets.SSH_KEY }}
