@@ -32,6 +32,15 @@ body {
   transform: translate(-50%,-50%);
 }
 
+.hero-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
 .blurred-image-container {
   width: 100%;
   height: 100%;
@@ -110,6 +119,10 @@ body {
 
 .scroll-opacity {
   opacity: 0;
+}
+
+.subheading {
+  font-weight: lighter;
 }
 
 @import "node_modules/bootstrap/scss/bootstrap";
