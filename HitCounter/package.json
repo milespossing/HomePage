@@ -1,0 +1,17 @@
+{
+  "name": "hitcounter",
+  "version": "1.0.0",
+  "description": "Simple web hit counter",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Miles Possing",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.6.0",
+    "morgan": "^1.10.0"
+  }
+}
